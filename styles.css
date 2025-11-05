@@ -33,18 +33,61 @@ body {
     padding: 0 20px;
 }
 
-/* Header styles */
-.header {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
-    padding: 3rem 0;
-    text-align: center;
-    box-shadow: var(--shadow);
+/* Top section for banner and profile card */
+.top-section {
+    position: relative;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding-bottom: 0px; /* Further reduced space for the profile card to overlap more */
+}
+
+/* Banner styles */
+.banner {
+    width: 100%;
+    /* Removed overflow: hidden to ensure full image visibility */
+}
+
+.banner-image {
+    width: 100%;
+    height: auto; /* Allow image to dictate its height based on aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area, cropping if necessary to fill width */
+    display: block;
+}
+
+/* Profile card styles */
+.profile-card {
+    position: absolute;
+    bottom: -70px; /* Moved even further up to overlap more */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px); /* Adjust for container padding */
+    max-width: 760px; /* Max width of container - 40px */
+    background: var(--bg-primary);
+    border-radius: 12px;
+    padding: 1.5rem 2.5rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    z-index: 10;
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: var(--shadow-lg);
+    flex-shrink: 0;
+}
+
+.profile-info {
+    flex: 1;
 }
 
 .name {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
@@ -60,9 +103,15 @@ body {
     font-weight: 500;
 }
 
+/* Header styles (now empty as content moved to profile-card) */
+.header {
+    display: none; /* Hide the old header */
+}
+
 /* Main content styles */
 .main {
     padding: 4rem 0;
+    margin-top: 40px; /* Adjusted to bring content sections closer to the profile card */
 }
 
 section {
@@ -83,11 +132,113 @@ section h2 {
     border-bottom: 2px solid var(--primary-color);
 }
 
+/* Experience section styles */
+.experience-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.experience-item h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.experience-item h4 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.experience-item h4 a {
+    color: inherit; /* Inherit color from parent (text-secondary) */
+    text-decoration: none; /* Remove underline by default */
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.experience-item h4 a:hover {
+    color: var(--primary-color); /* Apply primary color on hover */
+    text-decoration: underline; /* Apply underline on hover */
+}
+
+.experience-item .duration,
+.experience-item .location {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
+.experience-item .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.experience-item .technologies,
+.experience-item .responsibilities,
+.experience-item .achievements {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.experience-item ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
 /* About section */
 .about .description {
     font-size: 1.125rem;
     line-height: 1.7;
     color: var(--text-primary);
+}
+
+/* What I Offer section */
+.what-i-offer .description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.what-i-offer h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.what-i-offer ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.what-i-offer ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Contact section */
@@ -98,8 +249,15 @@ section h2 {
 
 .contact-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
+}
+
+.contact-icon {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    width: 24px; /* Fixed width for alignment */
+    text-align: center;
 }
 
 .contact-label {
@@ -137,6 +295,15 @@ section h2 {
 
 .footer p {
     font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer-icon {
+    color: var(--text-light);
+    font-size: 1rem;
 }
 
 /* Responsive design */
@@ -145,8 +312,21 @@ section h2 {
         padding: 0 16px;
     }
     
-    .header {
-        padding: 2rem 0;
+    .banner-image {
+        height: 180px;
+    }
+
+    .profile-card {
+        bottom: -180px; /* Adjusted for increased overlap on mobile */
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
     }
     
     .name {
@@ -159,6 +339,7 @@ section h2 {
     
     .main {
         padding: 2rem 0;
+        margin-top: 180px; /* Even further increased to prevent overlap with profile card on mobile */
     }
     
     section {

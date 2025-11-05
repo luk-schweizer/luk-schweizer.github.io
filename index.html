@@ -6,15 +6,22 @@
     <title>Lucas Schweizer - Software Engineer</title>
     <meta name="description" content="Software Engineer with 15+ years of experience providing software development services for international clients from Buenos Aires, Argentina">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="name">Lucas Schweizer</h1>
-            <p class="title">Software Engineer</p>
+    <div class="top-section">
+        <div class="banner">
+            <img src="banner.png" alt="Professional Banner" class="banner-image">
         </div>
-    </header>
+        <div class="profile-card container">
+            <img src="me.jpg" alt="Lucas Schweizer" class="profile-photo">
+            <div class="profile-info">
+                <h1 class="name">Lucas Schweizer</h1>
+                <p class="title">Software Engineer</p>
+            </div>
+        </div>
+    </div>
 
     <main class="main">
         <div class="container">
@@ -29,21 +36,187 @@
                 <h2>Contact Information</h2>
                 <div class="contact-grid">
                     <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
                         <span class="contact-label">Email:</span>
                         <a href="mailto:lucas_szr@yahoo.com.ar" class="contact-link">lucas_szr@yahoo.com.ar</a>
                     </div>
                     <div class="contact-item">
+                        <i class="fas fa-envelope-open-text contact-icon"></i>
                         <span class="contact-label">Alternative Email:</span>
                         <a href="mailto:lucas.sch@gmail.com" class="contact-link">lucas.sch@gmail.com</a>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-label">Address:</span>
-                        <span class="contact-text">Santa Fe 3681 11 E, CABA, 1425, Argentina</span>
-                    </div>
-                    <div class="contact-item">
+                        <i class="fas fa-mobile-alt contact-icon"></i>
                         <span class="contact-label">Mobile:</span>
                         <a href="tel:+5491130922603" class="contact-link">+54 91130922603</a>
                     </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin contact-icon"></i>
+                        <span class="contact-label">LinkedIn:</span>
+                        <a href="https://www.linkedin.com/in/luk-schweizer/" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/luk-schweizer</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="what-i-offer">
+                <h2>What I Offer</h2>
+                <p class="description">
+                    I provide independent software engineering services for global clients.
+                    Focused on scalable cloud infrastructures, performance optimization, and product delivery at scale.
+                </p> 
+                <h3>Areas of expertise:</h3>
+                <ul>
+                    <li>Node.js, TypeScript, React.js, Next.js, GraphQL, PostgreSQL, MongoDB, Redis.</li>
+                    <li>AWS (Lambda, ECS/Fargate, CloudFront, S3, API Gateway, CloudFormation), Terraform, Docker.</li>
+                    <li>System design, serverless architectures, and real-time event systems.</li>
+                </ul>
+            </section>
+
+            <section class="experience">
+                <h2>Experience</h2>
+
+                <div class="experience-item">
+                    <h3>Software Engineer</h3>
+                    <h4><a href="https://clevertech.biz" target="_blank" rel="noopener noreferrer">Lumenalta (formerly Clevertech)</a> · Independment Contractor</h4>
+                    <p class="duration">Nov 2021 - Present · 4 yrs 1 mo</p>
+                    <p class="location">Buenos Aires Province, Argentina · Remote</p>
+                    <p class="description">Providing software development services to Lumenalta (formerly Clevertech), focusing on scalable, cloud-based applications and modern web architecture. Working across frontend, backend, and cloud infrastructure.</p>
+                    <p class="technologies"><strong>Technologies used:</strong> Node.js, TypeScript, React.js, Next.js, GraphQL, WebGraphQL, MongoDB, PostgreSQL, Redis, AWS (Lambda, S3, CloudFront, SQS, SNS, CloudFormation, API Gateway, ECS), Terraform, Docker, GitHub.</p>
+                    <p class="responsibilities"><strong>Key Responsibilities:</strong></p>
+                    <ul>
+                        <li>Design and develop full-stack applications using React.js, Node.js, and TypeScript.</li>
+                        <li>Build and maintain APIs with GraphQL and WebGraphQL.</li>
+                        <li>Integrate third-party services and internal tools to support business features.</li>
+                        <li>Collaborate with distributed teams on code reviews, sprint planning, and product delivery.</li>
+                        <li>Configure and manage AWS infrastructure, CI/CD pipelines, and infrastructure as code.</li>
+                    </ul>
+                    <p class="achievements"><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Improved backend performance and reduced response times through optimized database queries and caching strategies.</li>
+                        <li>Led the setup of scalable AWS environments used across multiple projects.</li>
+                        <li>Implemented continuous integration and deployment pipelines.</li>
+                        <li>Contributed to design and development standards now adopted across several engineering teams.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Back End Developer</h3>
+                    <h4><a href="https://www.bayer.com" target="_blank" rel="noopener noreferrer">Bayer</a> · Full-time · 2 yrs 9 mos</h4>
+                    <p class="duration">Apr 2021 - Oct 2021 · 7 mos</p>
+                    <p class="location">Autonomous City of Buenos Aires, Buenos Aires Province, Argentina · Hybrid</p>
+                    <p class="description">Agile Scrum team member practicing DevOps in a team of 6 people from Argentina. Collaborating on a Microservice Architecture application along with 5 teams from Brazil and Argentina. Developing in JavaScript running in Node.js along with: express, knex, jest, eslint, aws-sdk. Infrastructure hosted in AWS: Api Gateway, Lambda, SQS, SNS, S3, KMS, SSM, Aurora with PostgreSQL, Cloudwatch, CodePipeline, CodeBuild, CodeDeploy, Cloudformation.</p>
+                    <p class="achievements"><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Collaborated on authentication layer migration of the whole application.</li>
+                        <li>Designed and developed an integration with DocuSign in 30% of the time of the original estimation. Features included idempotency, auto-recovery from faults and monitoring with Cloudwatch.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Cloud Engineer | Back End Developer</h3>
+                    <h4><a href="https://www.bayer.com" target="_blank" rel="noopener noreferrer">Bayer</a> · Full-time · 2 yrs 2 mos</h4>
+                    <p class="duration">Feb 2019 - Mar 2021 · 2 yrs 2 mos</p>
+                    <p class="location">Autonomous City of Buenos Aires, Buenos Aires Province, Argentina</p>
+                    <p class="description">Member of an Agile Scrum team of 6 people from Argentina, Brazil and USA, practicing DevOps. Responsible for defining and setting the infrastructure stack of an application hosted in AWS. Responsible for organizing a technical transformation from one AWS account to another. Coaching of 5 distributed teams with the new technologies defined. Developer of tools to speed up the migration of more than 120 Lambdas. Tools coded in JavaScript running in Node.js using: knex, jest, winston, eslint, aws-sdk. Infrastructure host in AWS. Services used: Api Gateway, Lambda, SQS, SNS, S3, Aurora with PostgreSQL, SSM, KMS, Cloudwatch, CodePipeline, CodeBuild, CodeDeploy, Cloudformation, Service Catalog.</p>
+                    <p class="achievements"><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Definition of migration strategy and setup of infrastructure layer including security and network.</li>
+                        <li>Introduced and put in place Infrastructure as Code as well as Continuous Delivery into the project.</li>
+                        <li>Proposed and developed migration automation tools, reducing migration estimation from 3 years into 1 year, ensuring work uniformity for all teams and less time needed for knowledge transition.</li>
+                        <li>Developed a tool for monitoring service limits of the AWS Account, avoiding reaching those limits by taking actions before there is any blocker on the Teams.</li>
+                        <li>Developed tools for updating templates and configurations on repositories by bulk, reducing the time for applying refactors and upgrades.</li>
+                        <li>Coaching a team having issues with deliverables and self-management, reducing carryovers to zero and increasing quality.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Full Stack Developer</h3>
+                    <h4><a href="https://www.monsanto.com.ar/" target="_blank" rel="noopener noreferrer">Monsanto Company</a> · Full-time · 5 yrs 9 mos</h4>
+                    <p class="duration">Jan 2017 - Jan 2019 · 2 yrs 1 mo</p>
+                    <p class="location">Autonomous City of Buenos Aires, Buenos Aires Province, Argentina</p>
+                    <p class="description">Agile Scrum team member practicing DevOps in a team of 7 people along with 5 teams distributed in Argentina, Brazil and USA. Being part of a transformation project from a Monolith into Microservice Architecture. Microservices coded in: JavaScript running in Node.js using: Express, Knex, Jest, Winston, Eslint, aws-sdk. JAVA using: Spring Boot, Spring Core, Spring WS, JUnit, Mockito, Lombok. Infrastructure included Cloud Foundry, Kafka, Jenkins, Kibana, Grafana, Splunk, AWS Services: Api Gateway, Lambda, SQS, SNS, S3, RDS with PostgreSQL, KMS, Cloudwatch, Cloudfront. Github as code repository. Frontend with Angular 2+.</p>
+                    <p class="achievements"><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Accomplished an initial production release in 7 months, which included over 7 Microservices per team.</li>
+                        <li>Added monitoring with Slack, auto-recovery and retry tools on a critical feature which was having big issues in production, leading to fix the issues before the user is aware.</li>
+                        <li>Proposed and developed a library for Centralize logging and Monitoring errors from different Lamba Functions using Winston and Cloudwatch, used by all teams.</li>
+                        <li>Delivered a library for managing DB transactions and connections in Serverless based on Knex, used by most of the teams.</li>
+                        <li>Developed a simple high efficient bulk processor solution with Node Streams.</li>
+                        <li>Technical Champion Engineer helping teams to align and improve DevOps practices, as well as sharing ideas with other projects of Crop Science area.</li>
+                        <li>Proposed and helped a QA Engineer to put in place automation integration testing using Jenkins, API testing, Cucumber, Slack and dashboards, increasing the quality and visibility.</li>
+                        <li>Collaborated on hiring new team members across the organization, building one team in Brazil and Argentina.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Back End Developer</h3>
+                    <h4><a href="https://www.monsanto.com.ar/" target="_blank" rel="noopener noreferrer">Monsanto Company</a> · Contractor · 3 mos</h4>
+                    <p class="duration">Oct 2016 - Dec 2016 · 3 mos</p>
+                    <p class="location">Autonomous City of Buenos Aires, Buenos Aires Province, Argentina</p>
+                    <p class="description">Agile Scrum team member practicing DevOps in a team of 4 people from Argentina and USA. Our responsibility was to move critical reports from a Monolith into Microservices making them able to handle the load. Developing Microservices with JAVA using Spring Boot, Spring Core, Spring WS, JUnit, Mockito, and hosted in Cloud Foundry.</p>
+                    <p class="achievements"><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Release one of the first Microservices at LATAM, presenting results to global managers to show the capabilities of the area.</li>
+                        <li>Develop a library capable of streaming XLSX files from a DB through an API to a web browser, able to handle large amount of data (at least 5 req x 100K tested). Library used by other projects and different teams.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Technical Lead</h3>
+                    <h4><a href="https://www.monsanto.com.ar/" target="_blank" rel="noopener noreferrer">Monsanto Company</a> · Contractor · 2 yrs 4 mos</h4>
+                    <p class="duration">Jun 2014 - Sep 2016 · 2 yrs 4 mos</p>
+                    <p class="location">Autonomous City of Buenos Aires, Buenos Aires Province, Argentina</p>
+                    <p class="description">Technical Leader of a team of 7-10 members from Argentina. Collaborating as a Developer in the deliverables in addition to assisting and coaching team members. Responsible of planning and estimation of the deliverables. Having meetings with key stakeholders in order to give visibility and plan ahead. Developing in a monolith web application coded in JAVA using Spring Core, Spring Data, Spring Security, Spring LDAP, Spring WS, Spring MVC, JUnit, Mockito, Hibernate, AngularJs, Maven, Open Ldap, WebLogic and Oracle DB.</p>
+                    <p class="achievements"><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Introduced Code Reviews into the team.</li>
+                        <li>Proposed and put in place a process of working which increased the collaboration, trust and quality, reducing bugs by 70% per sprint.</li>
+                        <li>Introduced and developed DDD into the project.</li>
+                        <li>Pushed team into agile scrum practices increasing the self-management of the team.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Full Stack Developer</h3>
+                    <h4><a href="https://www.monsanto.com.ar/" target="_blank" rel="noopener noreferrer">Monsanto Company</a> · Contractor · 1 yr 1 mo</h4>
+                    <p class="duration">May 2013 - May 2014 · 1 yr 1 mo</p>
+                    <p class="location">Autonomous City of Buenos Aires, Buenos Aires Province, Argentina</p>
+                    <p class="description">Software developer collaborating on a team with 7 members from Argentina. Developing in a monolith web application coded in JAVA using Spring Core, Spring Data, Spring Security, Spring LDAP, Spring WS, Spring MVC, JUnit, Mockito, Hibernate, AngularJs, Maven, Open Ldap, WebLogic and Oracle DB.</p>
+                    <p class="achievements"><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Organization of the team in the monolith by defining the design strategy, such as application layers, standardizations, branch strategy and frameworks.</li>
+                        <li>Addressed issues detected from Deloitte security audit.</li>
+                        <li>Developed authorization security layer for the system.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Senior Software Developer</h3>
+                    <h4><a href="https://www.coto.com.ar" target="_blank" rel="noopener noreferrer">COTO CICSA</a> · Full-time · 1 yr 4 mos</h4>
+                    <p class="duration">May 2011 - Aug 2012 · 1 yr 4 mos</p>
+                    <p class="location">Autonomous City of Buenos Aires, Buenos Aires Province, Argentina</p>
+                    <p class="description">Software Developer of multiple applications, including architecture design, deployment and production support.</p>
+                    <p class="achievements"><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Developed a CRUD of users centralized for all applications in the company applying Domain Driven Design. Time to setup a user has been reduced from 1-2 days to almost instantly. App made in JAVA using Spring Core, Spring Data, Spring LDAP and Oracle DB.</li>
+                        <li>Developed a Search Engine helping to find and reuse components of different projects of the company. App coded in JAVA, Hibernate Search, Apache Lucene and Oracle DB.</li>
+                        <li>Developed a web page in PHP for IPAD using google maps api, helping managers to make decisions when relocating employees.</li>
+                        <li>Collaborated in a team of 4 developers to develop a system to control flow of trucks inside a distribution centre. App made in JAVA, Struts2, Spring Core, Spring Data, Spring WS, Hibernate, JBoss and Oracle DB.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Junior Software Developer</h3>
+                    <h4>Nextel, Argentina · Contractor · 1 yr 3 mos</h4>
+                    <p class="duration">Nov 2007 - Jan 2009 · 1 yr 3 mos</p>
+                    <p class="location">Autonomous City of Buenos Aires, Buenos Aires Province, Argentina</p>
+                    <p class="description">Software developer collaborating on a team with 10 members from Argentina. Developing in a monolith web application coded in JAVA using: Spring, Hibernate, Struts2, JQuery, Maven, JBoss, JUnit and Oracle DB.</p>
+                    <p class="achievements"><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li>Introduced async requests into the project, delivering a better user experience.</li>
+                        <li>Fixed DB connection issues along the project which causes outages of the system.</li>
+                        <li>Huge business rules refactor of legacy code adding Unit Testing and making easier to maintain.</li>
+                    </ul>
                 </div>
             </section>
         </div>
@@ -51,7 +224,8 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Lucas Schweizer. All rights reserved.</p>
+            <p>Lucas Schweizer</p>
+            <p><i class="fas fa-map-marker-alt footer-icon"></i> Santa Fe 3681 11 E, CABA, 1425, Argentina</p>
         </div>
     </footer>
 </body>
