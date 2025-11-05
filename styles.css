@@ -1,0 +1,232 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --text-light: #9ca3af;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-dark: #111827;
+    --border-color: #e5e7eb;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 3rem 0;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Main content styles */
+.main {
+    padding: 4rem 0;
+}
+
+section {
+    background: var(--bg-primary);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+}
+
+section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* About section */
+.about .description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+}
+
+/* Contact section */
+.contact-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 140px;
+    flex-shrink: 0;
+}
+
+.contact-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.contact-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.contact-text {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Footer styles */
+.footer {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer p {
+    font-size: 0.875rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .header {
+        padding: 2rem 0;
+    }
+    
+    .name {
+        font-size: 2.25rem;
+    }
+    
+    .title {
+        font-size: 1.125rem;
+    }
+    
+    .main {
+        padding: 2rem 0;
+    }
+    
+    section {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .contact-label {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 2rem;
+    }
+    
+    .title {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 1.25rem;
+    }
+    
+    section h2 {
+        font-size: 1.375rem;
+    }
+    
+    .about .description {
+        font-size: 1rem;
+    }
+}
+
+/* Animation and interaction */
+section {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.contact-link {
+    position: relative;
+}
+
+.contact-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary-dark);
+    transition: width 0.2s ease;
+}
+
+.contact-link:hover::after {
+    width: 100%;
+}
